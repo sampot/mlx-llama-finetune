@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mlx-llama-finetune"
+version = "0.1.0"
+description = "Fine tune Llama 3.1 with MLX."
+authors = ["Sampot"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+mlx-lm = "^0.16.1"
+datasets = "^2.20.0"
+jupyter = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
