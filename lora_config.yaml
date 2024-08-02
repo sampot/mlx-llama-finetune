@@ -10,13 +10,13 @@ data: "data"
 seed: 0
 
 # Number of layers to fine-tune
-lora_layers: 32
+lora_layers: 16
 
 # Minibatch size.
-batch_size: 8
+batch_size: 4
 
 # Iterations to train for.
-iters: 1000
+iters: 100
 
 # Number of validation batches, -1 uses the entire validation set.
 val_batches: 25
@@ -37,7 +37,7 @@ resume_adapter_file: null
 adapter_path: "adapters"
 
 # Save the model every N iterations.
-save_every: 100
+save_every: 20
 
 # Evaluate on the test set after training
 test: false
@@ -55,6 +55,7 @@ grad_checkpoint: true
 lora_parameters:
   # The layer keys to apply LoRA to.
   # These will be applied for the last lora_layers
+  #keys: ["self_attn.q_proj", "self_attn.v_proj"]
   keys:
     [
       "mlp.gate_proj",
@@ -65,10 +66,10 @@ lora_parameters:
       "self_attn.v_proj",
       "self_attn.k_proj",
     ]
-  rank: 80
-  alpha: 256
-  scale: 20.0
-  dropout: 0.05
+  rank: 16
+  alpha: 32
+  scale: 10.0
+  dropout: 0.0
 # Schedule can only be specified in a config file, uncomment to use.
 # lr_schedule:
 #  name: cosine_decay
