@@ -1,8 +1,8 @@
 # Fine-tune Llama model with MLX
 
-# Pre-requisites
+## Pre-requisites
 
-# You need a Hugging Face account and agreed to the terms for [Meta-Llama 3.1 8B](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B)
+1. You need a Hugging Face account and agreed to the terms for [Meta-Llama 3.1 8B](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B)
 
 ## Checkout code
 

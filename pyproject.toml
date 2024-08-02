@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "Fine tune Llama 3.1 with MLX."
 authors = ["Sampot"]
 readme = "README.md"
-packages = [{ include = "scripts" },]
 
 [tool.poetry.dependencies]
 python = "^3.12"

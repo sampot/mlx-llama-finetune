@@ -7,6 +7,11 @@ source_model="meta-llama/Meta-Llama-3.1-8B"
 local_model="./models/mlx"
 fused_model="./models/llama-3.1-fused"
 
+function install() {
+  poetry install --no-root
+  poetry run pip install -r llama.cpp/requirements.txt
+}
+
 function data() {
   if [ ! -d "./data" ] || [ ! -f "./data/train.jsonl" ] || [ ! -f "./data/valid.jsonl" ]; then
     echo "Download and prepare datesets."
@@ -115,6 +120,9 @@ function help() {
 }
 
 case "$1" in
+install)
+  install
+  ;;
 data)
   data
   ;;
