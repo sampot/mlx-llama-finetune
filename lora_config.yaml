@@ -1,5 +1,5 @@
 # The path to the local model directory or Hugging Face repo.
-model: "meta-llama/Meta-Llama-3.1-8B"
+model: "meta-llama/Meta-Llama-3.1-8B-Instruct"
 # Whether or not to train (boolean)
 train: true
 
@@ -56,18 +56,18 @@ lora_parameters:
   # The layer keys to apply LoRA to.
   # These will be applied for the last lora_layers
   #keys: ["self_attn.q_proj", "self_attn.v_proj"]
-  keys:
-    [
-      "mlp.gate_proj",
-      "mlp.down_proj",
-      "self_attn.q_proj",
-      "mlp.up_proj",
-      "self_attn.o_proj",
-      "self_attn.v_proj",
-      "self_attn.k_proj",
-    ]
-  rank: 16
-  alpha: 32
+  #keys:
+  #  [
+  #    "mlp.gate_proj",
+  #    "mlp.down_proj",
+  #    "self_attn.q_proj",
+  #    "mlp.up_proj",
+  #    "self_attn.o_proj",
+  #    "self_attn.v_proj",
+  #    "self_attn.k_proj",
+  #  ]
+  rank: 8
+  alpha: 16
   scale: 10.0
   dropout: 0.0
 # Schedule can only be specified in a config file, uncomment to use.
