@@ -55,7 +55,7 @@ grad_checkpoint: true
 lora_parameters:
   # The layer keys to apply LoRA to.
   # These will be applied for the last lora_layers
-  #keys: ["self_attn.q_proj", "self_attn.v_proj"]
+  keys: ["self_attn.q_proj", "self_attn.v_proj"]
   #keys:
   #  [
   #    "mlp.gate_proj",
